@@ -8,6 +8,7 @@ import com.github.kyuubiran.ezxhelper.finders.base.BaseMemberFinder
 import com.github.kyuubiran.ezxhelper.interfaces.IFindSuper
 import java.lang.reflect.Field
 import java.lang.reflect.Modifier
+import kotlin.reflect.KClass
 
 /**
  * Helper for finding field(s) in the class or collection.
@@ -25,6 +26,11 @@ class FieldFinder private constructor(seq: Sequence<Field>) : BaseMemberFinder<F
                 exceptMessageScope { ctor(this@apply, "No such field found in class: ${clazz.name}") }
             }
         }
+
+        @JvmStatic
+        @JvmSynthetic
+        @KotlinOnly
+        fun fromClass(kclazz: KClass<*>): FieldFinder = fromClass(kclazz.java)
 
         @JvmStatic
         fun fromClass(clazzName: String, classLoader: ClassLoader = EzXHelper.classLoader) =

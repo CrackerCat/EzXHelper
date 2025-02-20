@@ -624,6 +624,7 @@ public final class com/github/kyuubiran/ezxhelper/finders/ConstructorFinder : co
 	public static final fun fromArray ([Ljava/lang/reflect/Constructor;)Lcom/github/kyuubiran/ezxhelper/finders/ConstructorFinder;
 	public static final fun fromClass (Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/ConstructorFinder;
 	public static final fun fromClass (Ljava/lang/String;Ljava/lang/ClassLoader;)Lcom/github/kyuubiran/ezxhelper/finders/ConstructorFinder;
+	public static final synthetic fun fromClass (Lkotlin/reflect/KClass;)Lcom/github/kyuubiran/ezxhelper/finders/ConstructorFinder;
 	public static final fun fromIterable (Ljava/lang/Iterable;)Lcom/github/kyuubiran/ezxhelper/finders/ConstructorFinder;
 	public static final fun fromSequence (Lkotlin/sequences/Sequence;)Lcom/github/kyuubiran/ezxhelper/finders/ConstructorFinder;
 	public static final fun fromVararg ([Ljava/lang/reflect/Constructor;)Lcom/github/kyuubiran/ezxhelper/finders/ConstructorFinder;
@@ -640,6 +641,7 @@ public final class com/github/kyuubiran/ezxhelper/finders/ConstructorFinder$-Sta
 	public final fun fromArray ([Ljava/lang/reflect/Constructor;)Lcom/github/kyuubiran/ezxhelper/finders/ConstructorFinder;
 	public final fun fromClass (Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/ConstructorFinder;
 	public final fun fromClass (Ljava/lang/String;Ljava/lang/ClassLoader;)Lcom/github/kyuubiran/ezxhelper/finders/ConstructorFinder;
+	public final synthetic fun fromClass (Lkotlin/reflect/KClass;)Lcom/github/kyuubiran/ezxhelper/finders/ConstructorFinder;
 	public static synthetic fun fromClass$default (Lcom/github/kyuubiran/ezxhelper/finders/ConstructorFinder$-Static;Ljava/lang/String;Ljava/lang/ClassLoader;ILjava/lang/Object;)Lcom/github/kyuubiran/ezxhelper/finders/ConstructorFinder;
 	public final fun fromIterable (Ljava/lang/Iterable;)Lcom/github/kyuubiran/ezxhelper/finders/ConstructorFinder;
 	public final fun fromSequence (Lkotlin/sequences/Sequence;)Lcom/github/kyuubiran/ezxhelper/finders/ConstructorFinder;
@@ -660,6 +662,7 @@ public final class com/github/kyuubiran/ezxhelper/finders/FieldFinder : com/gith
 	public static final fun fromArray ([Ljava/lang/reflect/Field;)Lcom/github/kyuubiran/ezxhelper/finders/FieldFinder;
 	public static final fun fromClass (Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/FieldFinder;
 	public static final fun fromClass (Ljava/lang/String;Ljava/lang/ClassLoader;)Lcom/github/kyuubiran/ezxhelper/finders/FieldFinder;
+	public static final synthetic fun fromClass (Lkotlin/reflect/KClass;)Lcom/github/kyuubiran/ezxhelper/finders/FieldFinder;
 	public static final fun fromIterable (Ljava/lang/Iterable;)Lcom/github/kyuubiran/ezxhelper/finders/FieldFinder;
 	public static final fun fromSequence (Lkotlin/sequences/Sequence;)Lcom/github/kyuubiran/ezxhelper/finders/FieldFinder;
 	public static final fun fromVararg ([Ljava/lang/reflect/Field;)Lcom/github/kyuubiran/ezxhelper/finders/FieldFinder;
@@ -674,6 +677,7 @@ public final class com/github/kyuubiran/ezxhelper/finders/FieldFinder$-Static {
 	public final fun fromArray ([Ljava/lang/reflect/Field;)Lcom/github/kyuubiran/ezxhelper/finders/FieldFinder;
 	public final fun fromClass (Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/FieldFinder;
 	public final fun fromClass (Ljava/lang/String;Ljava/lang/ClassLoader;)Lcom/github/kyuubiran/ezxhelper/finders/FieldFinder;
+	public final synthetic fun fromClass (Lkotlin/reflect/KClass;)Lcom/github/kyuubiran/ezxhelper/finders/FieldFinder;
 	public static synthetic fun fromClass$default (Lcom/github/kyuubiran/ezxhelper/finders/FieldFinder$-Static;Ljava/lang/String;Ljava/lang/ClassLoader;ILjava/lang/Object;)Lcom/github/kyuubiran/ezxhelper/finders/FieldFinder;
 	public final fun fromIterable (Ljava/lang/Iterable;)Lcom/github/kyuubiran/ezxhelper/finders/FieldFinder;
 	public final fun fromSequence (Lkotlin/sequences/Sequence;)Lcom/github/kyuubiran/ezxhelper/finders/FieldFinder;
@@ -692,11 +696,13 @@ public final class com/github/kyuubiran/ezxhelper/finders/MethodFinder : com/git
 	public final fun filterNonFinal ()Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
 	public final fun filterNonStatic ()Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
 	public final fun filterStatic ()Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
+	public final fun filterVoidReturnType ()Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
 	public fun findSuper (Lkotlin/jvm/functions/Function1;)Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
 	public synthetic fun findSuper (Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
 	public static final fun fromArray ([Ljava/lang/reflect/Method;)Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
 	public static final fun fromClass (Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
 	public static final fun fromClass (Ljava/lang/String;Ljava/lang/ClassLoader;)Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
+	public static final synthetic fun fromClass (Lkotlin/reflect/KClass;)Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
 	public static final fun fromIterable (Ljava/lang/Iterable;)Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
 	public static final fun fromSequence (Lkotlin/sequences/Sequence;)Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
 	public static final fun fromVararg ([Ljava/lang/reflect/Method;)Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
@@ -709,6 +715,7 @@ public final class com/github/kyuubiran/ezxhelper/finders/MethodFinder$-Static {
 	public final fun fromArray ([Ljava/lang/reflect/Method;)Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
 	public final fun fromClass (Ljava/lang/Class;)Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
 	public final fun fromClass (Ljava/lang/String;Ljava/lang/ClassLoader;)Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
+	public final synthetic fun fromClass (Lkotlin/reflect/KClass;)Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
 	public static synthetic fun fromClass$default (Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder$-Static;Ljava/lang/String;Ljava/lang/ClassLoader;ILjava/lang/Object;)Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
 	public final fun fromIterable (Ljava/lang/Iterable;)Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;
 	public final fun fromSequence (Lkotlin/sequences/Sequence;)Lcom/github/kyuubiran/ezxhelper/finders/MethodFinder;

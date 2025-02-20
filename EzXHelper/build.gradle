@@ -6,16 +6,16 @@ plugins {
     id 'signing'
 }
 
-def versionName = "2.2.0"
+def versionName = "2.2.1"
 
 android {
-    compileSdkVersion = 34
-    buildToolsVersion = "34.0.0"
+    compileSdkVersion = 35
+    buildToolsVersion = "35.0.1"
     namespace = "com.github.kyuubiran"
 
     defaultConfig {
         minSdkVersion 24
-        targetSdkVersion 34
+        targetSdkVersion 35
 
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -70,7 +70,6 @@ dokkaHtml {
         }
     }
 }
-
 
 def mavenPushProp = project.rootProject.file('mavenpush.properties')
 def mavenPushPropExists = mavenPushProp.exists()

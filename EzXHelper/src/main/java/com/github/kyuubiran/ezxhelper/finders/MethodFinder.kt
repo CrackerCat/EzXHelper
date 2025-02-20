@@ -8,6 +8,7 @@ import com.github.kyuubiran.ezxhelper.finders.base.ExecutableFinder
 import com.github.kyuubiran.ezxhelper.interfaces.IFindSuper
 import java.lang.reflect.Method
 import java.lang.reflect.Modifier
+import kotlin.reflect.KClass
 
 /**
  * Helper for finding method(s) in the class or collection.
@@ -30,6 +31,11 @@ class MethodFinder private constructor(seq: Sequence<Method>) : ExecutableFinder
                 exceptMessageScope { ctor(this@apply, "No such method found in class: ${clazz.name}") }
             }
         }
+
+        @JvmStatic
+        @JvmSynthetic
+        @KotlinOnly
+        fun fromClass(kclazz: KClass<*>): MethodFinder = fromClass(kclazz.java)
 
         @JvmStatic
         fun fromClass(clazzName: String, classLoader: ClassLoader = EzXHelper.classLoader) =
@@ -100,6 +106,15 @@ class MethodFinder private constructor(seq: Sequence<Method>) : ExecutableFinder
     fun filterByReturnType(returnType: Class<*>) = applyThis {
         sequence = sequence.filter { it.returnType == returnType }
         exceptMessageScope { condition("filterByReturnType(${returnType.name})") }
+    }
+
+    /**
+     * Filter by method returns void type.
+     * @return [MethodFinder] this finder
+     */
+    fun filterVoidReturnType() = applyThis {
+        sequence = sequence.filter { it.returnType == Void.TYPE }
+        exceptMessageScope { condition("filterVoidReturnType") }
     }
 
     /**

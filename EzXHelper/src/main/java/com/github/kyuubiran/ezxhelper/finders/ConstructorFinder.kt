@@ -6,6 +6,7 @@ import com.github.kyuubiran.ezxhelper.EzXHelper
 import com.github.kyuubiran.ezxhelper.annotations.KotlinOnly
 import com.github.kyuubiran.ezxhelper.finders.base.ExecutableFinder
 import java.lang.reflect.Constructor
+import kotlin.reflect.KClass
 
 /**
  * Helper for finding constructor(s) in the class or collection.
@@ -24,9 +25,14 @@ class ConstructorFinder private constructor(seq: Sequence<Constructor<*>>) : Exe
         }
 
         @JvmStatic
+        @JvmSynthetic
+        @KotlinOnly
+        fun fromClass(kclazz: KClass<*>): ConstructorFinder = fromClass(kclazz.java)
+
+        @JvmStatic
         fun fromSequence(seq: Sequence<Constructor<*>>): ConstructorFinder {
             return ConstructorFinder(seq).apply {
-                exceptMessageScope { ctor(this@apply,"No such constructor found in sequence(size=${seq.count()})") }
+                exceptMessageScope { ctor(this@apply, "No such constructor found in sequence(size=${seq.count()})") }
             }
         }
 
@@ -38,21 +44,21 @@ class ConstructorFinder private constructor(seq: Sequence<Constructor<*>>) : Exe
         @JvmStatic
         fun fromArray(array: Array<Constructor<*>>): ConstructorFinder {
             return ConstructorFinder(array.asSequence()).apply {
-                exceptMessageScope { ctor(this@apply,"No such constructor found in array(size=${array.count()})") }
+                exceptMessageScope { ctor(this@apply, "No such constructor found in array(size=${array.count()})") }
             }
         }
 
         @JvmStatic
         fun fromVararg(vararg array: Constructor<*>): ConstructorFinder {
             return ConstructorFinder(array.asSequence()).apply {
-                exceptMessageScope { ctor(this@apply,"No such constructor found in array(size=${array.count()})") }
+                exceptMessageScope { ctor(this@apply, "No such constructor found in array(size=${array.count()})") }
             }
         }
 
         @JvmStatic
         fun fromIterable(iterable: Iterable<Constructor<*>>): ConstructorFinder {
             return ConstructorFinder(iterable.asSequence()).apply {
-                exceptMessageScope { ctor(this@apply,"No such constructor found in iterable)") }
+                exceptMessageScope { ctor(this@apply, "No such constructor found in iterable)") }
             }
         }
 

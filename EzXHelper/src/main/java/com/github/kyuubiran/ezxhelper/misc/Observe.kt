@@ -61,6 +61,7 @@ class Observe<T> {
         removeListener(listener)
     }
 
+    @Deprecated("Not working", level = DeprecationLevel.ERROR)
     operator fun minusAssign(listener: (T) -> Unit) {
         removeListener(listener)
     }
