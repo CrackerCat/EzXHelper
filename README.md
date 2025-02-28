@@ -31,3 +31,5 @@
 如果你喜欢这个项目，且想要通过捐赠的方式支持我，可以通过以下渠道：
 
 - [爱发电](https://afdian.net/a/kyuubiran)
+
+[![Star History Chart](https://api.star-history.com/svg?repos=kyuubiran/ezxhelper&type=Date)](https://star-history.com/#kyuubiran/ezxhelper&Date)
